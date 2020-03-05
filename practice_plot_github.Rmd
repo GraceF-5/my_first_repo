@@ -1,0 +1,26 @@
+---
+title: "practice plotting and GitHub"
+author: "Grace French"
+date: "3/5/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+```
+
+
+
+```{r}
+ggplot(iris, aes(x = Petal.Length)) +
+  geom_histogram(fill = "cyan1", color = "darkcyan", bins = 15) +
+  theme_test () + labs(x = "Petal Lenght", y = "Count") -> p
+
+ggsave("practice_plot.png", p)
+
+p
+
+```
+
